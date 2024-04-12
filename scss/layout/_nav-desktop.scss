@@ -11,16 +11,21 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: rgba(16, 16, 16, 0.75);
-	backdrop-filter: blur(4px);
 	mask-image: linear-gradient(to top, transparent, black 12.5%);
+	transition: background-color 0.3s, backdrop-filter 0.3s;
+
+	&--bg-active {
+		background-color: rgba(16, 16, 16, 0.75);
+		backdrop-filter: blur(4px);
+	}
 
 	&__container {
 		// border: 1px solid red;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1em 0;
+		height: 100px;
+		// padding: 1em 0;
 		// gap: 10em;
 	}
 
@@ -28,7 +33,7 @@
 		transition: filter 0.3s;
 
 		img {
-			height: 75px;
+			height: 50px;
 		}
 
 		&:hover {

@@ -58,6 +58,14 @@
 		// align-items: center;
 		gap: 0.5em;
 
+		&--link {
+			transition: color 0.3s;
+
+			&:hover {
+				color: $color-500;
+			}
+		}
+
 		svg {
 			color: $color-500;
 		}
@@ -65,7 +73,7 @@
 
 	&__bottom-box {
 		padding: 1em 0;
-		background-color: #101010;
+		// background-color: #101010;
 		text-align: center;
 		// color: gray;
 		text-wrap: balance;

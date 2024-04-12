@@ -7,11 +7,102 @@
 .header {
 	// border: 1px solid red;
 	// margin: 15em 0;
-	height: 75vh;
-	background-image: url("../../img/bg.png");
-	background-position: center;
+	position: relative;
+	height: 85vh;
+	background-image: url("../img/header/md.png");
+	background-position: left;
 	background-size: cover;
 	background-attachment: fixed;
+
+	&__box {
+		// border: 1px solid red;
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	&__item-box {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+
+		h1 {
+			text-wrap: balance;
+		}
+	}
+
+	&__text-box {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	&__icon-box {
+		display: flex;
+		gap: 0.5em;
+		align-self: center;
+		transition: color 0.3s;
+
+		svg {
+			color: $color-500;
+		}
+
+		&:hover {
+			color: $color-500;
+		}
+	}
+
+	&__reviews-box {
+		align-self: center;
+		margin-top: 5em;
+		display: grid;
+		grid-template-columns: 0.3fr 1fr;
+		grid-template-rows: repeat(2, 1fr);
+		column-gap: 1em;
+		// padding: 1em 2em;
+		pointer-events: none;
+
+		.rating {
+			// border: 1px solid blue;
+			grid-column: 2/-1;
+			grid-row: 1/2;
+			align-self: center;
+			justify-self: center;
+
+			&__background {
+				fill: gray;
+				stroke: red;
+				stroke-width: 1;
+				height: 100%;
+				width: 100%;
+			}
+
+			&__value {
+				fill: #ffb94b;
+				height: 100%;
+			}
+		}
+	}
+
+	&__rating-number {
+		// border: 1px solid red;
+		grid-column: 1/2;
+		grid-row: 1/-1;
+		align-self: center;
+		justify-self: center;
+	}
+
+	&__rating-text {
+		grid-column: 2/-1;
+		grid-row: 2/3;
+		align-self: center;
+		justify-self: center;
+	}
 }
 
 @media (min-width: 576px) {
@@ -19,17 +110,56 @@
 }
 
 @media (min-width: 768px) {
-	// .header {}
+	.header {
+		background-image: url("../img/header/lg.png");
+
+		&__box {
+			text-align: left;
+		}
+
+		&__icon-box {
+			align-self: flex-start;
+		}
+
+		&__reviews-box {
+			align-self: flex-end;
+		}
+	}
 }
 
 @media (min-width: 992px) {
-	// .header {}
+	.header {
+		background-image: url("../img/header/xl.png");
+		background-position: bottom;
+
+		&__box {
+			position: absolute;
+			top: 55%;
+			left: 10%;
+			transform: translate(0, -50%);
+			width: 70%;
+		}
+
+		&__reviews-box {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
 }
 
 @media (min-width: 1200px) {
-	// .header {}
+	.header {
+		&__box {
+			width: 60%;
+		}
+	}
 }
 
 @media (min-width: 1400px) {
-	// .header {}
+	.header {
+		&__box {
+			width: 50%;
+		}
+	}
 }

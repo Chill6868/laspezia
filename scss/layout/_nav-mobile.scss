@@ -121,16 +121,26 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.95);
-	backdrop-filter: blur(4px);
-	transition: backdrop-filter 0.3s;
+	mask-image: linear-gradient(to top, transparent, black 12.5%);
+	transition: background-color 0.3s, backdrop-filter 0.3s;
+
+	&--active {
+		backdrop-filter: blur(16px);
+		mask-image: none;
+	}
+
+	&--bg-active {
+		background-color: rgba(16, 16, 16, 0.75);
+		backdrop-filter: blur(4px);
+	}
 
 	&__container {
 		// border: 1px solid red;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1em 0;
+		height: 100px;
+		// padding: 1em 0;
 		// gap: 10em;
 	}
 
@@ -193,10 +203,6 @@
 		&:hover {
 			color: $color-500;
 		}
-	}
-
-	&--active {
-		backdrop-filter: blur(16px);
 	}
 }
 
