@@ -1,0 +1,70 @@
+// ===========================================================================
+// Tailwind Color Palette (https://uicolors.app/create)
+// ===========================================================================
+
+$color-100: #ffdfe3;
+$color-200: #ffc5cd;
+$color-300: #ff9daa;
+$color-400: #ff657a;
+$color-500: #ff3450;
+$color-600: #ed1a37;
+$color-700: #c70e27;
+$color-800: #a50f24;
+$color-900: #881424;
+
+$color-text: #fff;
+// $color-background: #141414;
+$color-background: #151515;
+
+// ===========================================================================
+// Custom Variables
+// ===========================================================================
+
+$border-radius: 6px;
+
+// ===========================================================================
+// Buttons Variables
+// ===========================================================================
+
+$btn-border-width: 2px;
+$btn-border-radius: 6px;
+$btn-default-color: $color-500;
+$btn-gradient-color: linear-gradient(45deg, $color-900, $color-500);
+$btn-transition-time: 0.6s;
+$btn-hover-brightness: 0.7;
+
+// ===========================================================================
+// Gradients
+// ===========================================================================
+
+$gradient-300: linear-gradient(to right, $color-300 0%, $color-100 100%);
+$gradient-600: linear-gradient(to right, $color-600 0%, $color-300 100%);
+$gradient-900: linear-gradient(to right, $color-900 0%, $color-600 100%);
+
+// ===========================================================================
+// Background Gradients
+// ===========================================================================
+
+$gradient-background-1: linear-gradient(145deg, #213b8f 0%, #ff4134 100%);
+
+// ===========================================================================
+// Text Gradients
+// ===========================================================================
+
+@mixin textGradient900 {
+	background: linear-gradient(to right, $color-900 0%, $color-600 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin textGradient600 {
+	background: linear-gradient(to right, $color-600 0%, $color-300 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin textGradient300 {
+	background: linear-gradient(to right, $color-300 0%, $color-100 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

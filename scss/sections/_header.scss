@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Header
+// ===========================================================================
+
+.header {
+	// border: 1px solid red;
+	// margin: 15em 0;
+	height: 75vh;
+	background-image: url("../../img/bg.png");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+@media (min-width: 576px) {
+	// .header {}
+}
+
+@media (min-width: 768px) {
+	// .header {}
+}
+
+@media (min-width: 992px) {
+	// .header {}
+}
+
+@media (min-width: 1200px) {
+	// .header {}
+}
+
+@media (min-width: 1400px) {
+	// .header {}
+}

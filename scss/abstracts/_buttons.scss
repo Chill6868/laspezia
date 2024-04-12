@@ -1,0 +1,74 @@
+@use "./variables" as *;
+
+// ===========================================================================
+// Custom Made Buttons
+// ===========================================================================
+
+.btn {
+	position: relative;
+	padding: 0.5em 1em;
+	background: transparent;
+	border-radius: $btn-border-radius;
+
+	&__solid,
+	&__solid-gradient,
+	&__border,
+	&__border-gradient {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $btn-default-color;
+		border-radius: $btn-border-radius;
+		transition: filter $btn-transition-time;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: $btn-border-radius;
+			border: $btn-border-width solid transparent;
+			background: $btn-default-color border-box;
+			mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+			mask-composite: exclude;
+		}
+
+		&:hover {
+			filter: brightness($btn-hover-brightness);
+		}
+	}
+
+	&__border {
+		background: transparent;
+	}
+
+	&__solid-gradient {
+		background: transparent;
+
+		&::before {
+			background: $btn-gradient-color border-box;
+			mask-composite: add;
+		}
+	}
+
+	&__border-gradient {
+		background: transparent;
+
+		&::before {
+			background: $btn-gradient-color border-box;
+		}
+	}
+
+	&__text {
+		position: relative;
+		color: $color-text;
+		pointer-events: none;
+	}
+}

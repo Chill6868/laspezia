@@ -1,0 +1,31 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Example Section
+// ===========================================================================
+
+.example {
+	// border: 1px solid red;
+	margin: 15em 0;
+	height: 50vh;
+}
+
+@media (min-width: 576px) {
+	// .example {}
+}
+
+@media (min-width: 768px) {
+	// .example {}
+}
+
+@media (min-width: 992px) {
+	// .example {}
+}
+
+@media (min-width: 1200px) {
+	// .example {}
+}
+
+@media (min-width: 1400px) {
+	// .example {}
+}

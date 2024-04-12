@@ -1,0 +1,122 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Footer
+// ===========================================================================
+
+.footer {
+	// height: 250px;
+	background-color: #121212;
+	border-top: 1px solid gray;
+	// text-align: center;
+	// border: 1px solid red;
+
+	&__upper-box {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		// grid-template-rows: 50px 150px;
+	}
+
+	&__link-box {
+		grid-column: 1/-1;
+		grid-row: 1/2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5em;
+		padding: 1em;
+	}
+
+	&__link {
+		transition: color 0.3s;
+		text-wrap: nowrap;
+
+		&:hover {
+			color: $color-500;
+		}
+	}
+
+	&__link-dot {
+		color: $color-500;
+	}
+
+	&__info-box {
+		grid-column: 1/-1;
+		grid-row: 2/3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 1em;
+		gap: 0.5em;
+	}
+
+	&__info-item {
+		// border: 1px solid red;
+		// margin: 0 auto;
+		display: flex;
+		// align-items: center;
+		gap: 0.5em;
+
+		svg {
+			color: $color-500;
+		}
+	}
+
+	&__bottom-box {
+		padding: 1em 0;
+		background-color: #101010;
+		text-align: center;
+		// color: gray;
+		text-wrap: balance;
+
+		.wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 0.5em;
+		}
+	}
+
+	&__text-author {
+		@include hover;
+		text-decoration: underline;
+	}
+}
+
+@media (min-width: 576px) {
+	.footer {
+		&__link-box {
+			gap: 1em;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	// .footer {}
+}
+
+@media (min-width: 992px) {
+	.footer {
+		&__link-box {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			// gap: 2em;
+		}
+
+		&__info-box {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			align-items: start;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	// .footer {}
+}
+
+@media (min-width: 1400px) {
+	// .footer {}
+}

@@ -1,0 +1,98 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Navigation on Desktop
+// ===========================================================================
+
+.nav-desktop {
+	// border: 1px solid red;
+	display: none;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: rgba(16, 16, 16, 0.75);
+	backdrop-filter: blur(4px);
+	mask-image: linear-gradient(to top, transparent, black 12.5%);
+
+	&__container {
+		// border: 1px solid red;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em 0;
+		// gap: 10em;
+	}
+
+	&__logo {
+		transition: filter 0.3s;
+
+		img {
+			height: 75px;
+		}
+
+		&:hover {
+			filter: brightness(1.2);
+		}
+	}
+
+	&__item-box {
+		// border: 1px solid blue;
+		display: flex;
+		align-items: center;
+		gap: 2em;
+	}
+
+	&__item {
+		font-size: 2rem;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $color-500;
+		}
+
+		&--active {
+			color: $color-300;
+		}
+	}
+
+	&__contact-box {
+		display: flex;
+		gap: 0.5em;
+		transition: color 0.3s;
+
+		svg {
+			color: $color-500;
+		}
+
+		span {
+			font-size: 2rem;
+		}
+
+		&:hover {
+			color: $color-500;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	// .nav-desktop {}
+}
+
+@media (min-width: 768px) {
+	// .nav-desktop {}
+}
+
+@media (min-width: 992px) {
+	.nav-desktop {
+		display: block;
+	}
+}
+
+@media (min-width: 1200px) {
+	// .nav-desktop {}
+}
+
+@media (min-width: 1400px) {
+	// .nav-desktop {}
+}

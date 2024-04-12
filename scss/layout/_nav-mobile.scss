@@ -1,0 +1,223 @@
+@use "../abstracts/" as *;
+
+// ===========================================================================
+// Hamburger Icons by Jonathan Suh, @jonsuh
+// ===========================================================================
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+.hamburger {
+	padding: 15px 15px;
+	display: inline-block;
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible;
+}
+.hamburger:hover {
+	.hamburger-inner,
+	.hamburger-inner::before,
+	.hamburger-inner::after {
+		background-color: $color-500;
+	}
+}
+.hamburger.is-active:hover {
+	opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+	background-color: #fff;
+}
+
+.hamburger-box {
+	width: 40px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+}
+
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	width: 40px;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+	transition: background-color 0.3s;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+	content: "";
+	display: block;
+}
+.hamburger-inner::before {
+	top: -10px;
+}
+.hamburger-inner::after {
+	bottom: -10px;
+}
+
+// Spin
+
+.hamburger--spin .hamburger-inner {
+	transition-duration: 0.22s;
+	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+	transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+	transition: bottom 0.1s 0.25s ease-in,
+		transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+	transform: rotate(225deg);
+	transition-delay: 0.12s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+	top: 0;
+	opacity: 0;
+	transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+	bottom: 0;
+	transform: rotate(-90deg);
+	transition: bottom 0.1s ease-out,
+		transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+// ===========================================================================
+// Navigation on Mobile
+// ===========================================================================
+
+.nav-mobile {
+	// border: 1px solid red;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.95);
+	backdrop-filter: blur(4px);
+	transition: backdrop-filter 0.3s;
+
+	&__container {
+		// border: 1px solid red;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em 0;
+		// gap: 10em;
+	}
+
+	&__logo {
+		transition: filter 0.3s;
+
+		img {
+			height: 50px;
+		}
+
+		&:hover {
+			filter: brightness(1.2);
+		}
+	}
+
+	&__menu {
+		// border: 1px solid red;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 0.75em;
+		gap: 1em;
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: height 0.3s, opacity 0.3s;
+
+		&--active {
+			height: calc(100vh - 92px);
+			opacity: 1;
+		}
+	}
+
+	&__menu-item {
+		// border: 1px solid red;
+		position: relative;
+		width: 85%;
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		transition: color 0.3s;
+
+		svg {
+			color: $color-500;
+		}
+
+		span {
+			font-size: 2.25rem;
+			font-size: 4rem;
+		}
+
+		&--contact-box {
+			display: flex;
+			gap: 0.5em;
+			transition: color 0.3s;
+		}
+
+		&:hover {
+			color: $color-500;
+		}
+	}
+
+	&--active {
+		backdrop-filter: blur(16px);
+	}
+}
+
+@media (min-width: 576px) {
+	// .nav-mobile {}
+}
+
+@media (min-width: 768px) {
+	// .nav-mobile {}
+}
+
+@media (min-width: 992px) {
+	.nav-mobile {
+		display: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	// .nav-mobile {}
+}
+
+@media (min-width: 1400px) {
+	// .nav-mobile {}
+}

@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+// html {
+// 	scroll-padding-top: 202px;
+// }
+
+body {
+	font-family: "Overpass", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	background-color: $color-background;
+}
+
+.disable-scroll {
+	overflow: hidden;
+}
