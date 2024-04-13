@@ -62,9 +62,9 @@
 		align-self: center;
 		margin-top: 5em;
 		display: grid;
-		grid-template-columns: 50px auto;
+		grid-template-columns: auto;
 		grid-template-rows: repeat(2, 1fr);
-		column-gap: 1em;
+		// column-gap: 1em;
 		// padding: 1em 2em;
 		pointer-events: none;
 
