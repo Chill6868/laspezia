@@ -642,7 +642,7 @@ body {
   align-self: center;
   margin-top: 5em;
   display: grid;
-  grid-template-columns: 50px;
+  grid-template-columns: 50px auto;
   grid-template-rows: repeat(2, 1fr);
   -moz-column-gap: 1em;
        column-gap: 1em;
