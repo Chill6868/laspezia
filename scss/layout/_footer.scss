@@ -25,11 +25,11 @@
 		align-items: center;
 		gap: 0.5em;
 		padding: 1em;
+		text-wrap: nowrap;
 	}
 
 	&__link {
 		transition: color 0.3s;
-		text-wrap: nowrap;
 
 		&:hover {
 			color: $color-500;

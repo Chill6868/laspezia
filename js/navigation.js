@@ -26,14 +26,6 @@ navMobileMenuItems.forEach((item) => {
 	});
 });
 
-document.addEventListener("scroll", () => {
-	if (scrollY >= 200) {
-		navMobile.classList.add("nav-mobile--bg-active");
-	} else {
-		navMobile.classList.remove("nav-mobile--bg-active");
-	}
-});
-
 // ===========================================================================
 // Navigation on Desktop
 // ===========================================================================

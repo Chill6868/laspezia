@@ -62,32 +62,25 @@
 		align-self: center;
 		margin-top: 5em;
 		display: grid;
+		// grid-template-columns: 0.25fr 1fr;
 		grid-template-columns: auto;
 		grid-template-rows: repeat(2, 1fr);
-		column-gap: 1em;
+		// grid-template-rows: 0.5fr;
+		// column-gap: 1em;
 		// padding: 1em 2em;
 		pointer-events: none;
 	}
 
 	&__rating {
-		$percent: calc(2.3 / 5 * 100%);
-
 		// border: 1px solid blue;
 		grid-column: 2/-1;
 		grid-row: 1/2;
-		align-self: center;
 		justify-self: center;
-		display: inline-block;
-		font-family: Times; // make sure ★ appears correctly
-		font-size: 3rem;
-
-		&::before {
-			content: "★★★★★";
-			letter-spacing: 3px;
-			background: linear-gradient(90deg, #fc0 $percent, #fff $percent);
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
+		align-self: center;
+		display: block;
+		height: 30px;
+		width: 200px;
+		// width: 100%;
 	}
 
 	&__rating-number {
@@ -126,6 +119,10 @@
 		&__reviews-box {
 			align-self: flex-end;
 		}
+
+		&__rating {
+			font-size: 3.5rem;
+		}
 	}
 }
 
@@ -154,6 +151,10 @@
 	.header {
 		&__box {
 			width: 60%;
+		}
+
+		&__rating {
+			font-size: 4rem;
 		}
 	}
 }

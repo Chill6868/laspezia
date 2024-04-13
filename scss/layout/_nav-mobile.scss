@@ -121,15 +121,12 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	transition: background-color 0.3s, backdrop-filter 0.3s;
+	background-color: rgba(16, 16, 16, 0.75);
+	backdrop-filter: blur(4px);
+	transition: backdrop-filter 0.3s;
 
 	&--active {
 		backdrop-filter: blur(16px);
-	}
-
-	&--bg-active {
-		background-color: rgba(16, 16, 16, 0.75);
-		backdrop-filter: blur(4px);
 	}
 
 	&__container {
