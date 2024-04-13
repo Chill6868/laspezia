@@ -15,7 +15,7 @@
 	background-attachment: fixed;
 
 	&__box {
-		// border: 1px solid red;
+		border: 1px solid red;
 		position: absolute;
 		top: 55%;
 		left: 50%;
@@ -93,7 +93,7 @@
 	&__rating-number {
 		// border: 1px solid red;
 		grid-column: 1/2;
-		grid-row: 1/-1;
+		grid-row: 1 / span 2;
 		align-self: center;
 		justify-self: center;
 	}
