@@ -649,8 +649,6 @@ body {
 .header__reviews-box .rating {
   grid-column: 2/-1;
   grid-row: 1/2;
-  align-self: center;
-  justify-self: center;
 }
 .header__reviews-box .rating__background {
   fill: gray;
