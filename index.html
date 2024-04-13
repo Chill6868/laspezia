@@ -151,7 +151,7 @@
             </div>
             <div class="header__reviews-box">
                 <p class="header__rating-number text__xl">4.2</p>
-                <svg viewBox="0 0 1000 200" class='rating'>
+                <!-- <svg viewBox="0 0 1000 200" class='rating'>
                     <defs>
 
                         <polygon id="star"
@@ -169,9 +169,30 @@
 
                     <rect class='rating__background' clip-path="url(#stars)"></rect>
 
-                    <!-- Change the width of this rect to change the rating -->
+                    Change the width of this rect to change the rating
                     <rect width="88%" class='rating__value' clip-path="url(#stars)"></rect>
 
+                </svg> -->
+                <svg viewBox="0 0 1000 200" class='rating' xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <clipPath id="stars">
+                            <polygon points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 " />
+                            <polygon
+                                points="300,0 331,66 400,76 350,128 362,200 300,166 238,200 250,128 200,76 269,66 " />
+                            <polygon
+                                points="500,0 531,66 600,76 550,128 562,200 500,166 438,200 450,128 400,76 469,66 " />
+                            <polygon
+                                points="700,0 731,66 800,76 750,128 762,200 700,166 638,200 650,128 600,76 669,66 " />
+                            <polygon
+                                points="900,0 931,66 1000,76 950,128 962,200 900,166 838,200 850,128 800,76 869,66 " />
+                        </clipPath>
+                    </defs>
+
+                    <rect width="1000" height="200" class='rating__background' style="fill: gray;"
+                        clip-path="url(#stars)"></rect>
+                    <rect width="88%" height="200" class='rating__value' style="fill: #ffb94b;" clip-path="url(#stars)">
+                    </rect>
                 </svg>
                 <p class="header__rating-text text__sm">480+ opinii w Google</p>
             </div>

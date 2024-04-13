@@ -59,21 +59,21 @@
 
 	&__reviews-box {
 		border: 1px solid red;
-		// align-self: center;
+		align-self: center;
 		margin-top: 5em;
 		display: grid;
 		grid-template-columns: auto;
 		grid-template-rows: repeat(2, 1fr);
-		// column-gap: 1em;
+		column-gap: 1em;
 		// padding: 1em 2em;
 		pointer-events: none;
 
 		.rating {
-			// border: 1px solid blue;
+			border: 1px solid blue;
 			grid-column: 2/-1;
 			grid-row: 1/2;
-			// align-self: center;
-			// justify-self: center;
+			align-self: center;
+			justify-self: center;
 
 			&__background {
 				fill: gray;
@@ -99,6 +99,7 @@
 	}
 
 	&__rating-text {
+		border: 1px solid green;
 		grid-column: 2/-1;
 		grid-row: 2/3;
 		align-self: center;
