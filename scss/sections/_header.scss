@@ -58,10 +58,11 @@
 	}
 
 	&__reviews-box {
+		border: 1px solid red;
 		align-self: center;
 		margin-top: 5em;
 		display: grid;
-		grid-template-columns: 0.3fr 1fr;
+		grid-template-columns: auto;
 		grid-template-rows: repeat(2, 1fr);
 		column-gap: 1em;
 		// padding: 1em 2em;

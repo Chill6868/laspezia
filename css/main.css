@@ -628,10 +628,11 @@ body {
   color: #ff3450;
 }
 .header__reviews-box {
+  border: 1px solid red;
   align-self: center;
   margin-top: 5em;
   display: grid;
-  grid-template-columns: 0.3fr 1fr;
+  grid-template-columns: auto;
   grid-template-rows: repeat(2, 1fr);
   -moz-column-gap: 1em;
        column-gap: 1em;

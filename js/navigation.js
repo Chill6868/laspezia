@@ -27,7 +27,7 @@ navMobileMenuItems.forEach((item) => {
 });
 
 document.addEventListener("scroll", () => {
-	if (scrollY >= 500) {
+	if (scrollY >= 200) {
 		navMobile.classList.add("nav-mobile--bg-active");
 	} else {
 		navMobile.classList.remove("nav-mobile--bg-active");
@@ -41,7 +41,7 @@ document.addEventListener("scroll", () => {
 const navDesktop = document.querySelector(".nav-desktop");
 
 document.addEventListener("scroll", () => {
-	if (scrollY >= 500) {
+	if (scrollY >= 200) {
 		navDesktop.classList.add("nav-desktop--bg-active");
 	} else {
 		navDesktop.classList.remove("nav-desktop--bg-active");
