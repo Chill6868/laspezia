@@ -116,7 +116,7 @@
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: -0.2rem;
-  line-height: 4rem;
+  line-height: 1.2em;
 }
 .text__gradient-1 {
   background: linear-gradient(to right, #213b8f 0%, #ff4134 40%);
@@ -143,7 +143,6 @@
   }
   .text__xl {
     font-size: 4.25rem;
-    line-height: 4.75rem;
   }
 }
 @media (min-width: 768px) {
@@ -158,7 +157,6 @@
   }
   .text__xl {
     font-size: 5.5rem;
-    line-height: 6rem;
   }
 }
 @media (min-width: 992px) {
@@ -167,15 +165,22 @@
   }
   .text__xl {
     font-size: 7rem;
-    line-height: 7.5rem;
   }
 }
 @media (min-width: 1200px) {
   .text__xl {
     font-size: 7.5rem;
-    line-height: 8rem;
   }
 }
+.icon-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em;
+}
+.icon-box__text {
+  gap: 0;
+}
+
 *,
 *::after,
 *::before {
