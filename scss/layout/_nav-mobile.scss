@@ -121,12 +121,10 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	mask-image: linear-gradient(to top, transparent, black 12.5%);
 	transition: background-color 0.3s, backdrop-filter 0.3s;
 
 	&--active {
 		backdrop-filter: blur(16px);
-		mask-image: none;
 	}
 
 	&--bg-active {
@@ -207,7 +205,13 @@
 }
 
 @media (min-width: 576px) {
-	// .nav-mobile {}
+	.nav-mobile {
+		mask-image: linear-gradient(to top, transparent, black 12.5%);
+
+		&--active {
+			mask-image: none;
+		}
+	}
 }
 
 @media (min-width: 768px) {

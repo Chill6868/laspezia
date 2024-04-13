@@ -420,8 +420,6 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  -webkit-mask-image: linear-gradient(to top, transparent, black 12.5%);
-          mask-image: linear-gradient(to top, transparent, black 12.5%);
   transition: background-color 0.3s, -webkit-backdrop-filter 0.3s;
   transition: background-color 0.3s, backdrop-filter 0.3s;
   transition: background-color 0.3s, backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s;
@@ -429,8 +427,6 @@ body {
 .nav-mobile--active {
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
-  -webkit-mask-image: none;
-          mask-image: none;
 }
 .nav-mobile--bg-active {
   background-color: rgba(16, 16, 16, 0.75);
@@ -493,6 +489,16 @@ body {
   color: #ff3450;
 }
 
+@media (min-width: 576px) {
+  .nav-mobile {
+    -webkit-mask-image: linear-gradient(to top, transparent, black 12.5%);
+            mask-image: linear-gradient(to top, transparent, black 12.5%);
+  }
+  .nav-mobile--active {
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+}
 @media (min-width: 992px) {
   .nav-mobile {
     display: none;
@@ -636,7 +642,7 @@ body {
   align-self: center;
   margin-top: 5em;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 50px;
   grid-template-rows: repeat(2, 1fr);
   -moz-column-gap: 1em;
        column-gap: 1em;
