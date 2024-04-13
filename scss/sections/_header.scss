@@ -15,7 +15,7 @@
 	background-attachment: fixed;
 
 	&__box {
-		border: 1px solid red;
+		// border: 1px solid red;
 		position: absolute;
 		top: 55%;
 		left: 50%;
@@ -58,7 +58,7 @@
 	}
 
 	&__reviews-box {
-		// border: 1px solid red;
+		border: 1px solid red;
 		align-self: center;
 		margin-top: 5em;
 		display: grid;
@@ -93,7 +93,7 @@
 	&__rating-number {
 		// border: 1px solid red;
 		grid-column: 1/2;
-		grid-row: 1 / span 2;
+		grid-row: 1/3;
 		align-self: center;
 		justify-self: center;
 	}
