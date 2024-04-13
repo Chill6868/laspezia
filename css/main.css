@@ -640,7 +640,6 @@ body {
 }
 .header__reviews-box {
   border: 1px solid red;
-  align-self: center;
   margin-top: 5em;
   display: grid;
   grid-template-columns: auto;
