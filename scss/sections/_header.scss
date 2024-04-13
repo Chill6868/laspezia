@@ -58,36 +58,35 @@
 	}
 
 	&__reviews-box {
-		border: 1px solid red;
+		// border: 1px solid red;
 		align-self: center;
 		margin-top: 5em;
-		width: 50%;
 		display: grid;
 		grid-template-columns: auto;
 		grid-template-rows: repeat(2, 1fr);
 		column-gap: 1em;
 		// padding: 1em 2em;
 		pointer-events: none;
+	}
 
-		.rating {
-			border: 1px solid blue;
-			grid-column: 2/-1;
-			grid-row: 1/2;
-			align-self: center;
-			justify-self: center;
+	&__rating {
+		$percent: calc(2.3 / 5 * 100%);
 
-			&__background {
-				fill: gray;
-				stroke: red;
-				stroke-width: 1;
-				height: 100%;
-				width: 100%;
-			}
+		// border: 1px solid blue;
+		grid-column: 2/-1;
+		grid-row: 1/2;
+		align-self: center;
+		justify-self: center;
+		display: inline-block;
+		font-family: Times; // make sure ★ appears correctly
+		font-size: 3rem;
 
-			&__value {
-				fill: #ffb94b;
-				height: 100%;
-			}
+		&::before {
+			content: "★★★★★";
+			letter-spacing: 3px;
+			background: linear-gradient(90deg, #fc0 $percent, #fff $percent);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 	}
 
@@ -100,7 +99,7 @@
 	}
 
 	&__rating-text {
-		border: 1px solid green;
+		// border: 1px solid green;
 		grid-column: 2/-1;
 		grid-row: 2/3;
 		align-self: center;
