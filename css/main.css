@@ -448,6 +448,7 @@ body {
   filter: brightness(1.2);
 }
 .nav-mobile__link-box {
+  border: 1px solid red;
   position: relative;
   width: 100%;
   display: flex;
