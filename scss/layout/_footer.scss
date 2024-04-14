@@ -25,10 +25,10 @@
 		align-items: center;
 		gap: 0.5em;
 		padding: 1em;
-		text-wrap: nowrap;
+		white-space: nowrap;
 	}
 
-	&__link {
+	&__link-item {
 		transition: color 0.3s;
 
 		&:hover {
@@ -54,17 +54,22 @@
 	&__info-item {
 		// border: 1px solid red;
 		// margin: 0 auto;
-		display: flex;
+		// display: flex;
 		// align-items: center;
-		gap: 0.5em;
+		// gap: 0.5em;
+		transition: color 0.3s;
 
-		&--link {
-			transition: color 0.3s;
-
-			&:hover {
-				color: $color-500;
-			}
+		&:hover {
+			color: $color-500;
 		}
+
+		// &--link {
+		// 	transition: color 0.3s;
+
+		// 	&:hover {
+		// 		color: $color-500;
+		// 	}
+		// }
 
 		svg {
 			color: $color-500;

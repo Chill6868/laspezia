@@ -6,8 +6,9 @@
 
 .icon-box {
 	display: grid;
+	// display: flex;
 	grid-template-columns: auto 1fr;
-	gap: 0.25em;
+	gap: 0.5em;
 
 	&__text {
 		gap: 0;

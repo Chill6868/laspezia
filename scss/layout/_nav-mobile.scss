@@ -120,6 +120,7 @@
 	z-index: 100;
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
 	background-color: rgba(16, 16, 16, 0.75);
 	backdrop-filter: blur(4px);
@@ -135,8 +136,6 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 100px;
-		// padding: 1em 0;
-		// gap: 10em;
 	}
 
 	&__logo {
@@ -144,6 +143,7 @@
 
 		img {
 			height: 50px;
+			// height: 100%;
 		}
 
 		&:hover {
@@ -151,14 +151,14 @@
 		}
 	}
 
-	&__menu {
+	&__link-box {
 		// border: 1px solid red;
 		position: relative;
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: 0.75em;
 		gap: 1em;
 		height: 0;
 		overflow: hidden;
@@ -166,33 +166,22 @@
 		transition: height 0.3s, opacity 0.3s;
 
 		&--active {
-			height: calc(100vh - 92px);
+			height: calc(100vh - 100px);
 			opacity: 1;
 		}
 	}
 
-	&__menu-item {
+	&__link-item {
 		// border: 1px solid red;
-		position: relative;
+		// position: relative;
 		width: 85%;
-		display: flex;
-		align-items: center;
-		gap: 1em;
+		// display: flex;
+		// align-items: center;
+		// gap: 1em;
 		transition: color 0.3s;
 
 		svg {
 			color: $color-500;
-		}
-
-		span {
-			font-size: 2.25rem;
-			font-size: 4rem;
-		}
-
-		&--contact-box {
-			display: flex;
-			gap: 0.5em;
-			transition: color 0.3s;
 		}
 
 		&:hover {
