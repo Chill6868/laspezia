@@ -1,7 +1,7 @@
 const iconBoxAll = document.querySelectorAll(".icon-box");
 const iconBoxTextAll = document.querySelectorAll(".icon-box__text");
 
-window.addEventListener("load", () => {
+const fixSVGDimensions = () => {
 	iconBoxAll.forEach((iconBox) => {
 		const svgElement = iconBox.querySelector("svg");
 
@@ -18,4 +18,6 @@ window.addEventListener("load", () => {
 		const iconBoxSpanTextContent = iconBoxSpan.textContent;
 		iconBoxSpan.innerHTML = `&nbsp;${iconBoxSpanTextContent}`;
 	});
-});
+};
+
+setTimeout(fixSVGDimensions, 1000);

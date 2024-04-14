@@ -507,9 +507,9 @@ body {
   align-items: center;
   gap: 0.5em;
   padding: 1em;
-  white-space: nowrap;
 }
 .footer__link-item {
+  white-space: nowrap;
   transition: color 0.3s;
 }
 .footer__link-item:hover {
